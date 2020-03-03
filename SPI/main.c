@@ -130,11 +130,11 @@ void pllInit(){
 	
 	
 	
-	// PLL1 DIVP division factor = 128
+	// PLL1 DIVP division factor = 0
 	RCC->PLL1DIVR &= ~RCC_PLL1DIVR_P1;
-	// PLL1 DIVQ division factor = 128
+	// PLL1 DIVQ division factor = 0
 	RCC->PLL1DIVR &= ~RCC_PLL1DIVR_Q1;
-	// PLL1 DIVR division factor = 128
+	// PLL1 DIVR division factor = 0
 	RCC->PLL1DIVR &= ~RCC_PLL1DIVR_R1;
 	
 	
@@ -189,7 +189,7 @@ void spiInit(){
 	
 	
 	// CFG1
-	// master clock /64
+	// master clock /32
 	SPI1->CFG1 |= SPI_CFG1_MBR_2;
 	// CRC computation disable
 	SPI1->CFG1 &= ~SPI_CFG1_CRCEN;
